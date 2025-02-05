@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SynthSMS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <h1>SynthSMS</h1>
+    <button id="openCalendar">Abrir Google Calendar</button>
+    <button id="sendSms">Enviar SMS</button>
+    <p id="installMessage"></p>
+    <button id="installBtn" style="display: none;">Instalar App</button>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js');
+        }
+    </script>
+</body>
+</html>
